@@ -24,8 +24,8 @@ class UserController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('使用者管理');
-            $content->description('description');
+            $content->header('會員管理');
+            $content->description('會員列表');
 
             $content->body($this->grid());
         });
@@ -42,7 +42,7 @@ class UserController extends Controller
         return Admin::content(function (Content $content) use ($id) {
 
             $content->header('編輯');
-            $content->description('編輯用戶資料');
+            $content->description('編輯會員資料');
 
             $content->body($this->form()->edit($id));
 
@@ -58,8 +58,8 @@ class UserController extends Controller
     {
         return Admin::content(function (Content  $content) {
 
-            $content->header('新增用戶');
-            $content->description('增加新用戶');
+            $content->header('新增會員');
+            $content->description('增加新會員');
 
             $content->body($this->form());
         });
@@ -75,9 +75,8 @@ class UserController extends Controller
         return Admin::grid(User::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
-
-            $grid->columns('name' , 'email');
-
+            $grid->columns('name' , 'email'); 
+            
             $grid->created_at();
             $grid->updated_at();
 
@@ -98,7 +97,7 @@ class UserController extends Controller
             $form->text('name', '姓名');
             $form->email('email', 'E-mail');
             $form->password('password','密碼');
-            
+
             $form->display('created_at', 'Created At');
 
             $form->display('updated_at', 'Updated At');
