@@ -22,3 +22,4 @@ use Encore\Admin\Form;
 Encore\Admin\Form::forget(['map', 'editor']);
 
 Form::extend('ckeditor', CKEditor::class);
+app('view')->prependNamespace('admin', resource_path('views/admin'));
