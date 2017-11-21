@@ -96,11 +96,13 @@ class UserController extends Controller
 
             $form->text('name', '姓名');
             $form->email('email', 'E-mail');
-            $form->password('password','密碼');
+            $form->password('password','密碼')->rules('confirmed');
+            $form->password('password_confirmation','確認密碼');
+            $form->ignore(['password_confirmation']);
+            $form->display('created_at', '建立時間');
 
-            $form->display('created_at', 'Created At');
-
-            $form->display('updated_at', 'Updated At');
+            $form->display('updated_at', '更新時間');
         });
+        
     }
 }
