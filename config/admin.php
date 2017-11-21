@@ -38,7 +38,7 @@ return [
     /*
      * Laravel-admin html title.
      */
-    'title' => 'Admin',
+    'title' => '後台管理系統',
 
     /*
      * Use `https`.
@@ -133,7 +133,7 @@ return [
      * @see https://adminlte.io/docs/2.4/layout
      */
     //'skin' => 'skin-blue-light',
-    'skin' => 'skin-blue',
+    'skin' => 'skin-blue-light',
 
     /*
     |---------------------------------------------------------|
