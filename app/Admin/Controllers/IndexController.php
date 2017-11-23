@@ -26,6 +26,8 @@ class IndexController extends Controller
 
         	$content->header('測試頁面');
         	$content->description('.....');
+
+        	//自訂義圖表
 			//$content->body(view('admin.charts.bar'));
 			
 

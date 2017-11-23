@@ -24,13 +24,12 @@ Encore\Admin\Form::forget(['map', 'editor']);
 
 Form::extend('ckeditor', CKEditor::class);
 //引入插件
-//Admin::js('/vendor/chartjs/src/chart.js');
-
+Admin::js('/vendor/chartjs/dist/Chart.min.js');
 
 Admin::navbar(function (\Encore\Admin\Widgets\Navbar $navbar) {
+
 	//左側加入搜尋
 	$navbar->left(view('search-bar'));
 	//右側加入圖示
 	$navbar->right(new \App\Admin\Extensions\Nav\Links()); 
-
 });
