@@ -45,7 +45,7 @@ class UserController extends Controller
             $content->header('編輯');
             $content->description('編輯會員資料');
 
-            $content->body($this->edit_form()->edit($id));
+            $content->body($this->form()->edit($id));
 
         });
     }
@@ -62,7 +62,7 @@ class UserController extends Controller
             $content->header('新增會員');
             $content->description('增加新會員');
 
-            $content->body($this->create_form());
+            $content->body($this->form());
         });
     }
 
@@ -91,7 +91,7 @@ class UserController extends Controller
      *
      * @return Form
      */
-    protected function create_form()
+    protected function form()
     {
         return Admin::form(User::class, function (Form $form) {
 
