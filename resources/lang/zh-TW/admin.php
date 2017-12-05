@@ -51,7 +51,7 @@ return [
     'update_succeeded'  => '更新成功 !',
     'save_succeeded'    => '保存成功 !',
     'refresh_succeeded' => '刷新成功 !',
-    'login_successful'  => '登錄成功 !',
+    'login_successful'  => '登入成功 !',
 
     'choose'       => '選擇',
     'choose_file'  => '選擇檔',
