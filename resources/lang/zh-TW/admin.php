@@ -2,7 +2,7 @@
 
 return [
     'online'                => '線上',
-    'login'                 => '登錄',
+    'login'                 => '登入',
     'logout'                => '登出',
     'setting'               => '設置',
     'name'                  => '名稱',
