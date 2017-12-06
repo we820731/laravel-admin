@@ -17,7 +17,7 @@ class CreateProductLogTable extends Migration
             
             $table->increments('plid')->comment('庫存變更紀錄id');
             $table->integer('pdid')->unsigned()->comment('商品副檔id');
-            $table->integer('pl_calculate')->default(1)->comment('增=1/減=-1');
+            $table->tinyInteger('pl_calculate')->default(1)->comment('增=1/減=-1');
             $table->integer('pl_count')->default(0)->comment('數量');
             $table->string('update_user',25)->comment('最後更新者');
             $table->timestamps(); 
